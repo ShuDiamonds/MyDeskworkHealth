@@ -18,7 +18,7 @@ $users[2]['sex'] = 'male';
 //print_r($users);
 
 foreach($users as $user){
-    echo $user['name'] . 'さんは' . $user['age'] . "歳です。\n";
+    //echo $user['name'] . 'さんは' . $user['age'] . "歳です。\n";
 }
   
 
@@ -35,7 +35,7 @@ $filename=$_GET["filename"];
 
 //###################POSTの処理
 if($_SERVER['REQUEST_METHOD']==="POST"){
-    echo "This is POST method".PHP_EOL;
+    echo "This is POST method\n".PHP_EOL;
   
     $rawdata = file_get_contents("php://input");
     $new_jsondata=json_decode($rawdata,true);   //trueを入れないと配列に治らない
